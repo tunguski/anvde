@@ -1,4 +1,4 @@
-##angularjs-nvd3-directives License
+##anvde License
 Copyright (c) 2013 Christian Maurer; Licensed
 
 Licensed under the Apache License, Version 2.0 (the "License");
