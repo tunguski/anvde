@@ -1,5 +1,5 @@
-/*! angularjs-nvd3-directives - v0.0.7 - 2014-08-08
-* http://cmaurer.github.io/angularjs-nvd3-directives
+/*! anvde - v0.0.7 - 2014-08-08
+* http://tunguski.github.io/anvde
 * Copyright (c) 2014 Christian Maurer; Licensed Apache License, v2.0 */
 angular.module('nvd3ChartDirectives', []);
 angular.module('legendDirectives', []);
