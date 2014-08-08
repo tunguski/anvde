@@ -6,8 +6,8 @@
     "Christian Maurer"
   ],
   "license": "Apache License, v2.0",
-  "homepage": "http://cmaurer.github.io/angularjs-nvd3-directives/",
-  "main": "./dist/angularjs-nvd3-directives.js",
+  "homepage": "https://github.com/tunguski/anvde",
+  "main": "./dist/anvde.js",
   "keywords": [
     "d3",
     "nvd3",

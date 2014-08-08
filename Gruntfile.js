@@ -63,7 +63,7 @@ module.exports = function (grunt) {
     },
 
     jsbeautifier : {
-      files : ['dist/angularjs-nvd3-directives.js'],
+      files : ['dist/anvde.js'],
       options : {
         js: {
           evalCode: true,
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
       },
       min: {
         files: {
-          'dist/angularjs-nvd3-directives.min.js': ['dist/angularjs-nvd3-directives.js']
+          'dist/anvde.min.js': ['dist/anvde.js']
         }
       }
     },
@@ -119,12 +119,12 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {src: ['build/components/angular/angular.js'], dest: 'examples/js/angular.js', filter: 'isFile'},
-          {src: ['build/components/angular-route/angular-route.js'], dest: 'examples/js/angular-route.js', filter: 'isFile'},
-          {src: ['build/components/d3/d3.js'], dest: 'examples/js/d3.js', filter: 'isFile'},
-          {src: ['build/components/nvd3/nv.d3.js'], dest: 'examples/js/nv.d3.js', filter: 'isFile'},
-          {src: ['build/components/nvd3/nv.d3.css'], dest: 'examples/stylesheets/nv.d3.css', filter: 'isFile'},
-          {src: ['build/components/moment/moment.js'], dest: 'examples/js/moment.js', filter: 'isFile'}
+          {src: ['bower_components/angular/angular.js'], dest: 'examples/js/angular.js', filter: 'isFile'},
+          {src: ['bower_components/angular-route/angular-route.js'], dest: 'examples/js/angular-route.js', filter: 'isFile'},
+          {src: ['bower_components/d3/d3.js'], dest: 'examples/js/d3.js', filter: 'isFile'},
+          {src: ['bower_components/nvd3/nv.d3.js'], dest: 'examples/js/nv.d3.js', filter: 'isFile'},
+          {src: ['bower_components/nvd3/nv.d3.css'], dest: 'examples/stylesheets/nv.d3.css', filter: 'isFile'},
+          {src: ['bower_components/moment/moment.js'], dest: 'examples/js/moment.js', filter: 'isFile'}
         ]
       }
     },
@@ -147,17 +147,17 @@ module.exports = function (grunt) {
       }
     },
 
-    bower: {
-      install: {
-        options: {
-          targetDir: './build/components',
-          layout: 'byComponent',
-          cleanTargetDir: true,
-          cleanBowerDir: false,
-          verbose: true
-        }
-      }
-    },
+//    bower: {
+//      install: {
+//        options: {
+//          targetDir: './bower_components',
+//          layout: 'byComponent',
+//          cleanTargetDir: true,
+//          cleanBowerDir: false,
+//          verbose: true
+//        }
+//      }
+//    },
 
     release: {
       options: {
@@ -169,7 +169,7 @@ module.exports = function (grunt) {
         npm: false,
         npmtag: true,
         github: {
-          repo: 'cmaurer/angularjs-nvd3-directives', //put your user/repo here
+          repo: 'tunguski/anvde', //put your user/repo here
           usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username
           passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
         }
