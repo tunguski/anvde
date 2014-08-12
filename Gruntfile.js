@@ -161,25 +161,7 @@ module.exports = function (grunt) {
 
     release: {
       options: {
-        bump: false,
-        file: 'bower.json',
-        tag: true,
-        commit: false,
-        tagName: 'v<%= version %>',
-        npm: false,
-        npmtag: true,
-        github: {
-          repo: 'tunguski/anvde', //put your user/repo here
-          usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username
-          passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
-        }
-      }
-    },
-    changelog: {
-      release: {
-        options: {
-          version: 'v0.0.7'
-        }
+        npm: false
       }
     }
   });
