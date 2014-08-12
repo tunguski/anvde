@@ -11,7 +11,7 @@
     <script src="../dist/anvde.js"></script>
     <link rel="stylesheet" href="stylesheets/nv.d3.css"/>
     <script>
-        var app = angular.module("nvd3TestApp", ['nvd3ChartDirectives']);
+        var app = angular.module("nvd3TestApp", ['anvde']);
 
         app.directive('nvd3RepeatChart', function ($compile) {
             var template = '<nvd3-line-chart data="chartData" id="exampleId" width="800" height="400" showXAxis="true" showYAxis="true" tooltips="true" interactive="true" margin="{left:50,top:50,bottom:50,right:50}" > <svg></svg> </nvd3-line-chart>';

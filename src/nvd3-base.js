@@ -1,3 +1,3 @@
 
-angular.module('nvd3ChartDirectives', []);
+angular.module('anvde', []);
 angular.module('legendDirectives', []);

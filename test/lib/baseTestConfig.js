@@ -1,5 +1,5 @@
 
-angular.module('test', ['nvd3ChartDirectives', 'legendDirectives']);
+angular.module('test', ['anvde', 'legendDirectives']);
 
 // load the controller's module
 beforeEach(module('test'));

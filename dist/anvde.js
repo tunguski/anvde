@@ -1,9 +1,9 @@
-/*! anvde - v0.0.7 - 2014-08-08
+/*! anvde - v0.0.11 - 2014-08-12
 * http://tunguski.github.io/anvde
 * Copyright (c) 2014 Christian Maurer; Licensed Apache License, v2.0 */
-angular.module('nvd3ChartDirectives', []);
+angular.module('anvde', []);
 angular.module('legendDirectives', []);
-angular.module('nvd3ChartDirectives').constant('nvd3Helpers', function () {
+angular.module('anvde').constant('nvd3Helpers', function () {
   function isArea(d) {
     return d.area;
   }
@@ -287,7 +287,7 @@ angular.module('nvd3ChartDirectives').constant('nvd3Helpers', function () {
     };
   return nvd3Helpers;
 }());
-angular.module('nvd3ChartDirectives').directive('nvd3Chart', [
+angular.module('anvde').directive('nvd3Chart', [
   '$filter',
   'nvd3Helpers',
   function ($filter, nvd3Helpers) {

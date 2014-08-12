@@ -1,6 +1,6 @@
 {
   "name": "anvde",
-  "version": "0.0.7",
+  "version": "0.0.11",
   "description": "Angular.js directives for nvd3.js.",
   "authors": [
     "Marek Romanowski",

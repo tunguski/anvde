@@ -1,5 +1,5 @@
 
-angular.module('nvd3ChartDirectives')
+angular.module('anvde')
     /*
      Common functions that sets up width, height, margin
      should prevent NaN errors

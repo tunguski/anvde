@@ -1,4 +1,4 @@
-angular.module('nvd3ChartDirectives')
+angular.module('anvde')
     .directive('nvd3Chart', ['$filter', 'nvd3Helpers', function ($filter, nvd3Helpers) {
       return {
         restrict: 'EA',
