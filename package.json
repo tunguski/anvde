@@ -1,6 +1,6 @@
 {
   "name": "anvde",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "homepage": "http://tunguski.github.io/anvde",
   "description": "Angular.js directives for nvd3",
   "main": "dist/anvde.js",
@@ -67,7 +67,7 @@
     "grunt-usemin": "^2.1.1",
     "grunt-wiredep": "^1.7.0",
     "jshint-stylish": "^0.4.0",
-	"conventional-changelog": "^0.0.11",
+    "conventional-changelog": "^0.0.11",
     "grunt-templated-changelog": "^0.1.3",
     "karma": "^0.12.16",
     "karma-cli": "0.0.4",
