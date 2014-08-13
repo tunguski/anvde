@@ -1,4 +1,4 @@
-/*! anvde - v0.0.11 - 2014-08-12
+/*! anvde - v0.0.12 - 2014-08-13
 * http://tunguski.github.io/anvde
 * Copyright (c) 2014 Christian Maurer; Licensed Apache License, v2.0 */
 angular.module('anvde', []);
@@ -273,13 +273,20 @@ angular.module('anvde').constant('nvd3Helpers', function () {
         if (d3.select(svgElem).empty()) {
           d3.select(element).append('svg');
         }
-        d3.select(svgElem).attr('viewBox', '0 0 ' + scope.opts.width + ' ' + scope.opts.height).datum(data).transition().duration(attrs.transitionduration === undefined ? 250 : +attrs.transitionduration).call(chart);
+        if (scope.opts.width && scope.opts.height) {
+          d3.select(svgElem).attr('viewBox', '0 0 ' + scope.opts.width + ' ' + scope.opts.height);
+        }
+        d3.select(svgElem).datum(data).transition().duration(attrs.transitionduration === undefined ? 250 : +attrs.transitionduration).call(chart);
       },
       updateDimensions: function (scope, attrs, element, chart) {
         if (chart) {
-          chart.width(scope.opts.width).height(scope.opts.height);
+          if (scope.opts.width && scope.opts.height) {
+            chart.width(scope.opts.width).height(scope.opts.height);
+          }
           var d3Select = this.getD3Selector(attrs, element);
-          d3.select(d3Select + ' svg').attr('viewBox', '0 0 ' + scope.opts.width + ' ' + scope.opts.height);
+          if (scope.opts.width && scope.opts.height) {
+            d3.select(d3Select + ' svg').attr('viewBox', '0 0 ' + scope.opts.width + ' ' + scope.opts.height);
+          }
           nv.utils.windowResize(chart);
           scope.chart.update();
         }

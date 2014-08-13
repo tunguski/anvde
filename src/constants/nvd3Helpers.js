@@ -262,8 +262,13 @@ angular.module('anvde')
             d3.select(element)
                 .append('svg');
           }
+
+          if (scope.opts.width && scope.opts.height) {
+            d3.select(svgElem)
+                .attr('viewBox', '0 0 ' + scope.opts.width + ' ' + scope.opts.height);
+          }
+
           d3.select(svgElem)
-              .attr('viewBox', '0 0 ' + scope.opts.width + ' ' + scope.opts.height)
               .datum(data)
               .transition().duration((attrs.transitionduration === undefined ? 250 : (+attrs.transitionduration)))
               .call(chart);
@@ -272,10 +277,14 @@ angular.module('anvde')
 
         updateDimensions: function (scope, attrs, element, chart) {
           if (chart) {
-            chart.width(scope.opts.width).height(scope.opts.height);
+            if (scope.opts.width && scope.opts.height) {
+              chart.width(scope.opts.width).height(scope.opts.height);
+            }
             var d3Select = this.getD3Selector(attrs, element);
-            d3.select(d3Select + ' svg')
-                .attr('viewBox', '0 0 ' + scope.opts.width + ' ' + scope.opts.height);
+            if (scope.opts.width && scope.opts.height) {
+              d3.select(d3Select + ' svg')
+                  .attr('viewBox', '0 0 ' + scope.opts.width + ' ' + scope.opts.height);
+            }
             nv.utils.windowResize(chart);
             scope.chart.update();
           }
