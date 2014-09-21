@@ -3,9 +3,7 @@
 To provide chart model you use ng-model. That's it! nvd3Chart attribute should have reference to configuration options for chart.
 
 ```html
-<div nvd3-chart="options" ng-model="data">
-  <svg></svg>
-</div>
+<div nvd3-chart="options" ng-model="data"></div>
 ```
 
 in this example:
