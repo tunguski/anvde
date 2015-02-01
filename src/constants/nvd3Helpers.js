@@ -172,7 +172,7 @@ angular.module('anvde')
               internal(invoke[key] ? chart[key]() : chart[key], value);
             } else {
               if (key !== 'chartType') {
-                console.log('Unknown configuration option: ' + key);
+                //console.log('Unknown configuration option: ' + key);
               }
             }
           });

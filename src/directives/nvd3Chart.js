@@ -34,7 +34,7 @@ angular.module('anvde')
 
               nv.addGraph({
                 generate: function () {
-                  console.log('creating chart: ' + scope.opts.chartType);
+                  //console.log('creating chart: ' + scope.opts.chartType);
                   var chart = nv.models[scope.opts.chartType]();
 
                   nvd3Helpers.rewriteOptions(chart, scope.opts);
