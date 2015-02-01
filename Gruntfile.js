@@ -101,10 +101,10 @@ module.exports = function (grunt) {
       }
     },
 
-    // ngmin tries to make the code safe for minification automatically by
+    // ngAnnotate tries to make the code safe for minification automatically by
     // using the Angular long form for dependency injection. It doesn't work on
     // things like resolve or inject so those have to be done manually.
-    ngmin: {
+    ngAnnotate: {
       dist: {
         files: [{
           expand: true,
@@ -175,7 +175,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'concat',
-    'ngmin',
+    'ngAnnotate',
     'copy:main',
     'uglify'
   ]);
