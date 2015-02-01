@@ -14,7 +14,7 @@ describe('Directive: nvd3Legend', function () {
 
     it('works', function () {
       var templateAsHtml = template.html();
-      expect(templateAsHtml).toContain('');
+      expect(templateAsHtml).toBeDefined();
     });
   });
 });
